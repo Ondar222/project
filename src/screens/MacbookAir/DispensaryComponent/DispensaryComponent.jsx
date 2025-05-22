@@ -5,7 +5,7 @@ import { PlayIcon } from "lucide-react";
 export const DispensaryComponent = () => {
   return (
     <div className="flex flex-col w-full max-w-[1068px] items-center gap-10 mx-auto my-20">
-      <h2 className="w-full [font-family:'Bebas_Neue',Helvetica] font-bold text-white text-5xl text-center tracking-[0] leading-normal">
+      <h2 className="w-full [font-family:'Bebas_Neue',Helvetica] font-bold text-white text-xl text-center tracking-[0] leading-normal">
         НАРКОЛОГИЧЕСКИЙ РЕАБИЛИТАЦИОННЫЙ ЦЕНТР ЛЕЧЕНИЯ АЛКОГОЛИЗМА И НАРКОМАНИИ
       </h2>
 

@@ -66,7 +66,6 @@ export const TermsContainer = () => {
                     className="condition-image"
                     src={condition.image}
                     alt="Living condition"
-                    style={getImageStyle(index)}
                   />
                 </div>
                 <p
@@ -83,19 +82,3 @@ export const TermsContainer = () => {
     </div>
   );
 };
-
-function getImageStyle(index) {
-  const baseStyle = {
-    position: "absolute",
-    objectFit: "cover",
-  };
-
-  const styles = [
-    { width: "500px", height: "300px", top: "-50px", left: "-100px" },
-    { width: "400px", height: "400px", top: "-80px", left: "-50px" },
-    { width: "350px", height: "350px", top: "-60px", left: "-30px" },
-    { width: "450px", height: "380px", top: "-70px", left: "-80px" },
-  ];
-
-  return { ...baseStyle, ...styles[index] };
-}

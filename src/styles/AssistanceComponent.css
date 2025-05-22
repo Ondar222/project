@@ -240,6 +240,20 @@
     grid-template-columns: 2fr 1fr;
   }
 
+  .second-row,
+  .fourth-row,
+  .sixth-row {
+    grid-template-columns: 1fr;
+  }
+
+  .third-row {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .fifth-row {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
   .wide-card-layout {
     flex-direction: row;
     text-align: left;
@@ -287,16 +301,18 @@
     grid-template-columns: 2fr 1fr;
   }
 
-  .second-row {
-    grid-template-columns: 1fr 1fr 2fr;
+  .second-row,
+  .fourth-row,
+  .sixth-row {
+    grid-template-columns: 1fr;
   }
 
   .third-row {
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 1fr;
   }
 
-  .fourth-row {
-    grid-template-columns: 2fr 1.5fr 1fr;
+  .fifth-row {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 
   .assistance-card {

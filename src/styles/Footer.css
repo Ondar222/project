@@ -1,0 +1,72 @@
+/* Мобильная версия футера */
+.footer {
+  width: 100%;
+  background-color: #1a352b;
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.footer-mobile-content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 100%;
+}
+
+.footer-mobile-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-mobile-item {
+  font-family: "Gilroy-Medium", sans-serif;
+  font-size: 14px;
+  color: white;
+  text-align: center;
+}
+
+.footer-mobile-contact {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "Gilroy-Medium", sans-serif;
+  font-size: 16px;
+  color: white;
+}
+
+.footer-mobile-phone {
+  font-family: "Gilroy-Bold", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.footer-mobile-icon {
+  width: 20px;
+  height: 20px;
+  color: white;
+}
+
+.footer-mobile-button {
+  background: linear-gradient(135deg, #8cd0ba 0%, #009b7d 100%);
+  border: none;
+  border-radius: 15px;
+  padding: 12px 24px;
+  color: white;
+  font-family: "Gilroy-Bold", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  white-space: nowrap;
+  margin-top: 10px;
+}
+
+/* Десктопная версия - скрываем */
+@media (min-width: 769px) {
+  .footer-mobile-content {
+    display: none;
+  }
+}

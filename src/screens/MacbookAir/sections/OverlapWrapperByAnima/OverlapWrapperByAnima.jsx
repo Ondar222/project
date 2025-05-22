@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { PhoneOutlined } from "@ant-design/icons";
 import { Button, Card, Input, message } from "antd";
 import styles from "../../../../styles/OverlapWrapper.module.css";
@@ -6,6 +6,32 @@ import styles from "../../../../styles/OverlapWrapper.module.css";
 const OverlapWrapperByAnima = () => {
   const [phoneNumber, setPhoneNumber] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const [bgPosition, setBgPosition] = useState("50% 50%");
+
+  useEffect(() => {
+    if (window.innerWidth > 768) return;
+
+    const handleMouseMove = (e) => {
+      const x = (e.clientX / window.innerWidth) * 40 - 10;
+      const y = (e.clientY / window.innerHeight) * 40 - 10;
+      setBgPosition(`${50 + x}% ${50 + y}%`);
+    };
+
+    const handleTouchMove = (e) => {
+      const touch = e.touches[0];
+      const x = (touch.clientX / window.innerWidth) * 40 - 10;
+      const y = (touch.clientY / window.innerHeight) * 40 - 10;
+      setBgPosition(`${50 + x}% ${50 + y}%`);
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener("touchmove", handleTouchMove);
+
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("touchmove", handleTouchMove);
+    };
+  }, []);
 
   const handlePhoneChange = (e) => {
     const value = e.target.value.replace(/\D/g, "");
@@ -53,7 +79,6 @@ const OverlapWrapperByAnima = () => {
       <div className={styles.roundedContainer}>
         <div className={styles.imageContainer}>
           <div className={styles.gradientCircle} />
-          {/* Desktop version shows only this background */}
           <img
             className={styles.mainImage}
             alt="Rehabilitation center staff"
@@ -101,8 +126,10 @@ const OverlapWrapperByAnima = () => {
           </Card>
         </div>
 
-        {/* Mobile version will show this additional image via CSS */}
-        <div className={styles.mobileBottomImage}></div>
+        <div
+          className={styles.mobileBottomImage}
+          style={{ backgroundPosition: bgPosition }}
+        ></div>
       </div>
     </section>
   );

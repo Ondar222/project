@@ -101,6 +101,10 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .condition-card:hover {
@@ -112,16 +116,24 @@
   height: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 500px;
 }
 
 /* Изображения */
 .image-container {
-  position: relative;
-  width: 100%;
-  height: 200px;
   margin-bottom: 20px;
-  overflow: hidden;
-  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.condition-image {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
 }
 
 /* Текст */
@@ -130,6 +142,7 @@
   font-size: 16px;
   line-height: 1.6;
   margin: 0;
+  text-align: center;
 }
 
 /* Адаптивность */
@@ -165,8 +178,9 @@
     padding: 20px;
   }
 
-  .image-container {
-    height: 180px;
+  .condition-image {
+    width: 120px;
+    height: 120px;
   }
 
   .leaves-animation {
@@ -181,5 +195,10 @@
 
   .condition-text {
     font-size: 14px;
+  }
+
+  .condition-image {
+    width: 100px;
+    height: 100px;
   }
 }
