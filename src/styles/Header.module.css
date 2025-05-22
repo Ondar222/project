@@ -1,13 +1,65 @@
 /* Общие стили */
+
 .topPanel,
-.mainHeader {
+.mainHeader,
+.mobileHeader {
   width: 100%;
   background-color: #1a352b;
   color: white;
   font-family: "Gilroy-Medium", sans-serif;
 }
 
-/* Верхняя панель с контактами */
+.icon {
+  font-size: 18px;
+}
+
+.callButton {
+  background: linear-gradient(135deg, #8cd0ba 0%, #009b7d 100%);
+  border: none;
+  border-radius: 15px;
+  color: white;
+  font-weight: 700;
+  padding: 10px 20px;
+  height: auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  white-space: nowrap;
+}
+
+/* Десктопная версия (как было) */
+.desktopHeader,
+.mobileHeader {
+  width: 100%;
+  min-width: 335px;
+  height: 90px;
+  background-color: #1a352b;
+  color: #ffffff;
+  font-family: "Gilroy-Medium", sans-serif;
+}
+.icon {
+  font-size: 18px;
+  color: #009b7d;
+}
+
+span {
+  color: #ffffff;
+}
+
+.regionInfo {
+  color: #ffffff;
+}
+
+.desktopHeader {
+  display: block;
+  padding: 15px 0;
+}
+
+.topRow {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 20px 20px;
+  /* border-bottom: 1px solid rgba(255, 255, 255, 0.1); */
+}
 .topPanel {
   padding: 12px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -32,28 +84,10 @@
   font-size: 16px;
 }
 
-.icon {
-  font-size: 18px;
+.phone .icon {
   transform: rotate(120deg);
 }
 
-.icon-rotated {
-  transform: rotate(180deg);
-}
-
-.callButton {
-  background: linear-gradient(135deg, #8cd0ba 0%, #009b7d 100%);
-  border: none;
-  border-radius: 15px;
-  color: white;
-  font-weight: 700;
-  padding: 10px 20px;
-  height: auto;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-  white-space: nowrap;
-}
-
-/* Основной заголовок */
 .mainHeader {
   padding: 20px 0;
   text-align: center;
@@ -64,7 +98,6 @@
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  margin-bottom: 15px;
 }
 
 .logo {
@@ -74,57 +107,71 @@
 
 .logoText {
   font-family: "Bebas Neue", sans-serif;
-  font-size: 36px;
+  font-size: 24px;
   font-weight: bold;
   letter-spacing: 1px;
+  text-align: center;
+}
+
+/* Мобильная версия (новая) */
+.mobileHeader {
+  display: none;
+}
+
+.topRow {
+  display: flex;
+  justify-content: center;
+  padding: 8px 0;
+  /* border-bottom: 1px solid rgba(255, 255, 255, 0.1); */
+}
+
+.middleRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  /* border-bottom: 1px solid rgba(255, 255, 255, 0.1); */
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.bottomRow {
+  padding: 15px 0;
+  text-align: center;
 }
 
 .regionInfo {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
+  margin-top: 10px;
 }
 
-/* Мобильная версия */
+/* Адаптация */
 @media (max-width: 768px) {
-  .topPanelContent {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    padding: 10px;
+  .desktopHeader {
+    display: none;
   }
 
-  .workingHours,
-  .location,
-  .phone {
-    font-size: 14px;
-    flex: 1 1 100%;
-    justify-content: center;
-  }
-
-  .callButton {
-    width: 100%;
-    padding: 12px;
-    order: 4;
-    margin-top: 10px;
+  .mobileHeader {
+    display: block;
   }
 
   .logo {
-    width: fit-content;
-  }
-
-  .logoText {
-    font-size: 28px;
-  }
-
-  .regionInfo {
-    font-size: 16px;
-    padding: 0 15px;
+    max-width: 123px !important;
+    max-height: 106px !important;
+    z-index: 999 !important;
+    position: relative;
+    top: 45px;
   }
 }
 
-/* Десктоп: скрыть регион в топбаре */
-@media (min-width: 769px) {
-  .regionInfo {
-    display: none;
+@media (max-width: 400px) {
+  .callButton {
+    padding: 8px 12px;
+    font-size: 14px;
   }
 }

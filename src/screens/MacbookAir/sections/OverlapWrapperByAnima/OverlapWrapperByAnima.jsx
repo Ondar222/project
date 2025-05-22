@@ -53,6 +53,7 @@ const OverlapWrapperByAnima = () => {
       <div className={styles.roundedContainer}>
         <div className={styles.imageContainer}>
           <div className={styles.gradientCircle} />
+          {/* Desktop version shows only this background */}
           <img
             className={styles.mainImage}
             alt="Rehabilitation center staff"
@@ -68,13 +69,12 @@ const OverlapWrapperByAnima = () => {
 
           <h1 className={styles.title}>Реабилитационный центр «12-й шаг»</h1>
 
-          <p className={styles.description}>
-            Пожалуйста, укажите номер телефона,
-            <br />
-            чтобы мы могли с вами связаться.
-          </p>
-
           <Card className={styles.phoneCard} bordered={false}>
+            <p className={styles.description}>
+              Пожалуйста, укажите номер телефона,
+              <br />
+              чтобы мы могли с вами связаться.
+            </p>
             <div className={styles.cardContent}>
               <div className={styles.phoneInputContainer}>
                 <div className={styles.phoneContainer}>
@@ -100,6 +100,9 @@ const OverlapWrapperByAnima = () => {
             </div>
           </Card>
         </div>
+
+        {/* Mobile version will show this additional image via CSS */}
+        <div className={styles.mobileBottomImage}></div>
       </div>
     </section>
   );

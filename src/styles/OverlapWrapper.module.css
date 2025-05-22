@@ -1,9 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+body {
+  padding: 20px 20px;
+  background-color: #1a352b;
+}
+
 .sectionContainer {
-  margin: 0 auto;
   width: 100%;
   min-width: 1140px;
   min-height: 404px;
-  height: auto;
   background: #dbf7ee;
   border-radius: 60px;
   overflow: hidden;
@@ -50,6 +55,10 @@
   object-fit: cover;
 }
 
+.mobileBottomImage {
+  display: none;
+}
+
 .contentContainer {
   display: flex;
   flex-direction: column;
@@ -65,10 +74,17 @@
   align-self: stretch;
   margin-top: -1px;
   font-weight: 500;
-  color: #252d2a;
+  color: #1a352b !important;
   font-size: 24px;
   letter-spacing: 0;
   line-height: normal;
+}
+
+.subtitle span {
+  max-width: 555px;
+  height: 29px;
+  color: #1a352b !important;
+  font-size: 24px !important;
 }
 
 .title {
@@ -105,19 +121,18 @@
   border: none;
   box-shadow: 0px 0px 20px rgba(37, 45, 42, 0.1);
   width: 100%;
-  overflow: hidden; /* Добавлено чтобы содержимое не выходило за границы */
+  overflow: hidden;
 }
 
 .phoneContainer {
   display: flex;
   align-items: center;
-
   background: white;
   border-radius: 15px;
   padding: 0 15px;
   height: 87px;
-  max-width: 475px; /* Добавлено для контроля ширины */
-  box-sizing: border-box; /* Учитываем padding в общей ширине */
+  max-width: 475px;
+  box-sizing: border-box;
 }
 
 .phoneInputContainer {
@@ -125,7 +140,7 @@
   align-items: center;
   font-size: 10px;
   min-width: 206px;
-  min-height: 47px; /* Фиксированная высота как у контейнера */
+  min-height: 47px;
 }
 
 .phoneInput {
@@ -134,17 +149,16 @@
   font-weight: 500;
   color: #252d2a;
   font-size: 14px;
-
   flex-grow: 1;
-
   outline: none;
-  min-width: 0; /* Позволяет полю ввода сжиматься */
+  min-width: 0;
   font-family: "Gilroy-Medium", Helvetica, sans-serif;
 }
 
 .phoneIcon {
   font-size: 24px;
   color: #252d2a;
+  transform: rotate(120deg);
 }
 
 .callButton {
@@ -159,62 +173,109 @@
     rgba(0, 155, 125, 1) 100%
   );
   border: none;
-  height: 60px; /* Такая же высота как у контейнера */
-  flex-shrink: 0; /* Кнопка не сжимается */
-  white-space: nowrap; /* Текст не переносится */
+  height: 60px;
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
-/* Для мобильных устройств */
+/* Mobile styles */
 @media (max-width: 768px) {
   .sectionContainer {
     display: flex;
     flex-direction: column;
-    min-width: 338px !important;
-    min-height: 645px !important;
-  }
-  .roundedContainer {
+    min-width: 335px !important;
+    min-height: 592px !important;
   }
 
   .mainImage {
-    width: fit-content;
+    width: 100%;
+    max-width: 561px;
+    height: 400px;
+    object-fit: cover;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+    margin-top: 40px; /* Смещаем чуть ниже центра */
+    border-radius: 10px;
+    filter: blur(1px);
+    mask-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 1%,
+      rgba(0, 0, 0, 1) 40%,
+      rgba(0, 0, 0, 1) 100%,
+      rgba(0, 0, 0, 0) 100%
+    );
   }
-  .styles.contentContainer {
-    font-size: 16px;
+
+  .contentContainer {
+    font-size: 18px;
     font-weight: 500 !important;
     width: 100% !important;
     min-height: 19px !important;
     line-height: 100% !important;
     letter-spacing: 0%;
+    padding: 20px;
+    background: #dbf7ee;
+  }
+
+  .mobileBottomImage {
+    display: block;
+    width: 100%;
+    height: 200px;
+    background-image: url("/img/mainLeaflet.png");
+    background-size: cover;
+    background-position: center;
+    margin-top: 20px;
   }
 
   .subtitle {
-    font-size: 20px;
     color: #1a352b;
+    text-align: center;
+    width: 100%;
+  }
+
+  .subtitle span {
+    font-weight: 500;
+    min-width: 285px !important;
+    height: 29px;
+    color: #1a352b !important;
+    font-size: 16px !important;
+    line-height: 100%;
+    letter-spacing: normal;
   }
 
   .title {
+    min-width: 222px;
     display: flex;
-    flex-direction: column;
+
     justify-content: center;
     text-align: center;
-    font-size: 32px;
+    font-size: 32px !important;
     line-height: 100%;
     color: #1a352b;
+    top: 10px;
   }
 
   .phoneCard {
     min-width: 286px;
-    min-height: 169px;
+    max-height: 169px;
     border-radius: 10%;
+    text-align: center;
+    font-size: 10px !important;
+    top: 120px;
   }
-  .phoneContainer {
-  }
+
   .phoneInputContainer {
     display: flex;
     flex-direction: column;
+    gap: 1px;
   }
 
   .phoneInput {
     z-index: 100;
+  }
+
+  .callButton {
   }
 }

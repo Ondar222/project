@@ -5,36 +5,37 @@ import styles from "../../../../styles/Header.module.css";
 
 export const HeaderByAnima = () => {
   return (
-    <>
-      {/* Верхняя информационная панель */}
-      <div className={styles.topPanel}>
-        <div className={styles.topPanelContent}>
-          <div className={styles.workingHours}>
+    <div className={styles.headerContainer}>
+      {/* Первый ряд - только время работы */}
+      <div className={styles.topRow}>
+        <div className={styles.workingHours}>
+          <span>Время работы: Круглосуточно</span>
+        </div>
+      </div>
+
+      {/* Второй ряд - телефон, город и кнопка */}
+      <div className={styles.middleRow}>
+        <div className={styles.contactInfo}>
+          <div className={styles.phone}>
             <PhoneOutlined className={styles.icon} />
-            <span>Время работы: Круглосуточно</span>
+            <span>8 800 500 89 55</span>
           </div>
           <div className={styles.location}>
             <EnvironmentOutlined className={styles.icon} />
             <span>г. Иваново</span>
           </div>
-          {/* Основной заголовок */}
-          <header className={styles.mainHeader}>
-            <div className={styles.logoContainer}>
-              <img src="/img/logo.png" alt="12 Шаг" className={styles.logo} />
-            </div>
-            <div className={styles.regionInfo}>
-              Работаем по ИВАНОВО И ОБЛАСТИ
-            </div>
-          </header>
-          <div className={styles.phone}>
-            <PhoneOutlined className={styles.icon} />
-            <span>8 800 500 89 55</span>
-          </div>
-          <Button className={styles.callButton} type="primary">
-            Срочный вызов врача
-          </Button>
+        </div>
+        <Button className={styles.callButton} type="primary">
+          Срочный вызов
+        </Button>
+      </div>
+
+      {/* Третий ряд - логотип и регион */}
+      <div className={styles.bottomRow}>
+        <div className={styles.logoContainer}>
+          <img src="/img/logo.png" alt="12 Шаг" className={styles.logo} />
         </div>
       </div>
-    </>
+    </div>
   );
 };
