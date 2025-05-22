@@ -1,0 +1,220 @@
+.sectionContainer {
+  margin: 0 auto;
+  width: 100%;
+  min-width: 1140px;
+  min-height: 404px;
+  height: auto;
+  background: #dbf7ee;
+  border-radius: 60px;
+  overflow: hidden;
+  position: relative;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.roundedContainer {
+  position: relative;
+  border-radius: 60px;
+}
+
+.imageContainer {
+  width: 100%;
+  height: 100%;
+  border-radius: 60px;
+  overflow: hidden;
+}
+
+.gradientCircle {
+  width: 494px;
+  height: 494px;
+  top: -588px;
+  right: 0;
+  border-radius: 247.12px;
+  background: linear-gradient(
+    135deg,
+    rgba(140, 208, 186, 1) 0%,
+    rgba(0, 155, 125, 1) 100%
+  );
+  position: absolute;
+  filter: blur(250px);
+}
+
+.mainImage {
+  position: absolute;
+  width: 561px;
+  height: 543px;
+  top: 0;
+  right: 0;
+  object-fit: cover;
+}
+
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 555px;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 40px 40px;
+}
+
+.subtitle {
+  position: relative;
+  align-self: stretch;
+  margin-top: -1px;
+  font-weight: 500;
+  color: #252d2a;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.title {
+  max-width: 555px !important;
+  min-height: 160px;
+  position: relative;
+  align-self: stretch;
+  font-weight: 700;
+  color: #1a352b;
+  font-size: 80px;
+  letter-spacing: 0;
+  line-height: 100px;
+  font-family: "Bebas Neue", Helvetica, sans-serif;
+  margin: 0;
+}
+
+.description {
+  min-width: 296px;
+  min-height: 38px;
+  position: relative;
+  width: fit-content;
+  font-weight: 500;
+  color: #1a352b;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+  font-family: "Gilroy-Medium", Helvetica, sans-serif;
+  margin: 0;
+}
+
+.phoneCard {
+  min-width: 475px;
+  min-height: 87px;
+  border: none;
+  box-shadow: 0px 0px 20px rgba(37, 45, 42, 0.1);
+  width: 100%;
+  overflow: hidden; /* Добавлено чтобы содержимое не выходило за границы */
+}
+
+.phoneContainer {
+  display: flex;
+  align-items: center;
+
+  background: white;
+  border-radius: 15px;
+  padding: 0 15px;
+  height: 87px;
+  max-width: 475px; /* Добавлено для контроля ширины */
+  box-sizing: border-box; /* Учитываем padding в общей ширине */
+}
+
+.phoneInputContainer {
+  display: flex;
+  align-items: center;
+  font-size: 10px;
+  min-width: 206px;
+  min-height: 47px; /* Фиксированная высота как у контейнера */
+}
+
+.phoneInput {
+  border: none;
+  background: transparent;
+  font-weight: 500;
+  color: #252d2a;
+  font-size: 14px;
+
+  flex-grow: 1;
+
+  outline: none;
+  min-width: 0; /* Позволяет полю ввода сжиматься */
+  font-family: "Gilroy-Medium", Helvetica, sans-serif;
+}
+
+.phoneIcon {
+  font-size: 24px;
+  color: #252d2a;
+}
+
+.callButton {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 100;
+  padding: 0 25px;
+  border-radius: 15px;
+  background: linear-gradient(
+    135deg,
+    rgba(140, 208, 186, 1) 0%,
+    rgba(0, 155, 125, 1) 100%
+  );
+  border: none;
+  height: 60px; /* Такая же высота как у контейнера */
+  flex-shrink: 0; /* Кнопка не сжимается */
+  white-space: nowrap; /* Текст не переносится */
+}
+
+/* Для мобильных устройств */
+@media (max-width: 768px) {
+  .sectionContainer {
+    display: flex;
+    flex-direction: column;
+    min-width: 338px !important;
+    min-height: 645px !important;
+  }
+  .roundedContainer {
+  }
+
+  .mainImage {
+    width: fit-content;
+  }
+  .styles.contentContainer {
+    font-size: 16px;
+    font-weight: 500 !important;
+    width: 100% !important;
+    min-height: 19px !important;
+    line-height: 100% !important;
+    letter-spacing: 0%;
+  }
+
+  .subtitle {
+    font-size: 20px;
+    color: #1a352b;
+  }
+
+  .title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: 32px;
+    line-height: 100%;
+    color: #1a352b;
+  }
+
+  .phoneCard {
+    min-width: 286px;
+    min-height: 169px;
+    border-radius: 10%;
+  }
+  .phoneContainer {
+  }
+  .phoneInputContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .phoneInput {
+    z-index: 100;
+  }
+}

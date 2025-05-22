@@ -1,0 +1,108 @@
+/* DivWrapperByAnima.css */
+
+.section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 16px; /* базовый внутренний отступ */
+  gap: 30px;
+  align-items: center;
+}
+
+.card {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px; /* вместо gap-2.5 (10px) */
+  padding: 0;
+}
+
+/* Заголовки */
+.title {
+  width: 100%;
+  margin-top: -1px; /* как в оригинале */
+
+  font-family: "Bebas Neue", Helvetica, sans-serif; /* шрифт */
+  font-weight: bold;
+
+  color: #fff;
+
+  font-size: 64px; /* базовый размер */
+
+  text-align: center;
+
+  letter-spacing: 0; /* tracking-[0] */
+
+  line-height: auto; /* по умолчанию */
+}
+
+/* Вариант для меньших экранов */
+@media (max-width: 1024px) {
+  .title {
+    font-size: 48px; /* уменьшаем размер на планшетах/мобильных */
+    padding-left: 10px;
+    padding-right: 10px;
+    box-sizing: border-box;
+  }
+}
+
+/* Для еще меньших экранов */
+@media (max-width: 768px) {
+  .title {
+    font-size: 36px;
+  }
+}
+
+/* Вторая заголовок */
+.subtitle {
+  width: 100%;
+
+  font-family: "Gilroy-Bold", Helvetica, sans-serif;
+  font-weight: bold;
+
+  color: #fff;
+
+  font-size: 40px;
+
+  text-align: center;
+
+  letter-spacing: 0;
+}
+
+/* Меньшие экраны для второго заголовка */
+@media (max-width: 1024px) {
+  .subtitle {
+    font-size: 30px;
+  }
+}
+@media (max-width: 768px) {
+  .subtitle {
+    font-size: 24px;
+  }
+}
+
+/* Картинка-контейнер */
+.imageContainer {
+  position: absolute; /* чтобы позиционировать относительно блока-обертки, если нужно */
+  width: auto;
+  height: auto;
+  max-width: none;
+}
+
+@media (max-width: 768px) {
+  .imageContainer {
+    width: 90vw; /* адаптивная ширина на мобильных */
+    height: auto;
+    border-radius: 20px; /* чуть меньше радиус на мобильных для эстетики */
+    background-position: center center;
+    background-size: auto cover;
+  }
+}

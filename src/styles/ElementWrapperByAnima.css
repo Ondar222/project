@@ -1,0 +1,110 @@
+/* ElementWrapperByAnima.css */
+
+.section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px;
+  gap: 20px;
+  align-items: center;
+}
+
+.section-title {
+  margin-top: -1px;
+  font-family: "Bebas Neue", Helvetica, sans-serif;
+  font-weight: bold;
+  color: #fff;
+  font-size: 64px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: auto;
+  margin-bottom: 20px;
+}
+
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  width: 100%;
+}
+
+.card {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  gap: 10px;
+}
+
+.imageContainer {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.doctorImage {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+.textContainer {
+  padding: 0 8px;
+}
+
+.doctorName {
+  font-family: "Gilroy-Bold", Helvetica, sans-serif;
+  font-weight: bold;
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+.doctorPosition {
+  font-family: "Gilroy-Medium", Helvetica, sans-serif;
+  font-weight: 500;
+  color: #fff;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+@media (max-width: 1024px) {
+  .section-title {
+    font-size: 48px;
+  }
+
+  .doctorName {
+    font-size: 16px;
+  }
+
+  .doctorPosition {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 36px;
+  }
+
+  .cardsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .doctorName {
+    font-size: 15px;
+  }
+
+  .doctorPosition {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,347 @@
+/* Общие стили */
+.assistance-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+  background: #1a352b;
+  box-sizing: border-box;
+}
+
+.assistance-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  padding: 0 15px;
+}
+
+.assistance-header h1,
+.assistance-header h2 {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.assistance-header h1 {
+  font-size: 36px;
+}
+
+.assistance-header h2 {
+  font-size: 30px;
+}
+
+/* Сетка карточек */
+.cards-grid {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 15px;
+}
+
+.cards-row {
+  display: grid;
+  gap: 15px;
+  width: 100%;
+}
+
+/* Базовые стили карточек */
+.assistance-card {
+  border-radius: 20px !important;
+  overflow: hidden;
+  height: 100%;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  border: none !important;
+}
+
+/* Стили для карточек с контентом */
+.wide-card-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.wide-card-image {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.wide-card-text {
+  font-family: "Gilroy", sans-serif;
+  color: #333;
+  font-size: 16px;
+  text-align: center;
+}
+
+.bold-text {
+  font-weight: 700;
+  font-size: 18px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.medium-text {
+  font-weight: 500;
+}
+
+/* Карточки с цифрами */
+.years-card,
+.guarantee-card,
+.warranty-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+  height: 100%;
+}
+
+.years-number,
+.guarantee-number,
+.warranty-number {
+  font-family: "Gilroy", sans-serif;
+  font-weight: 800;
+  color: #009b7d;
+  font-size: 48px;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.years-text,
+.guarantee-text,
+.warranty-text {
+  font-family: "Gilroy", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+/* Карточки с изображениями */
+.nas-card,
+.pickup-card,
+.award-card,
+.methods-card,
+.certificate-card,
+.eurocare-card,
+.therapy-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  height: 100%;
+  text-align: center;
+}
+
+.nas-image,
+.pickup-image,
+.award-image,
+.methods-image,
+.certificate-image,
+.eurocare-image {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.pickup-image {
+  width: 50px;
+  height: 50px;
+}
+
+/* Текст в карточках */
+.nas-text,
+.pickup-text,
+.award-text,
+.eurocare-text {
+  font-family: "Gilroy", sans-serif;
+  font-size: 16px;
+}
+
+/* Therapy card специфические стили */
+.therapy-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.therapy-images {
+  position: absolute;
+  opacity: 0.2;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.therapy-blurred-image {
+  width: 80px;
+  height: 80px;
+}
+
+.therapy-text {
+  position: relative;
+  z-index: 1;
+}
+
+.therapy-bold-text {
+  font-weight: 700;
+  font-size: 18px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.therapy-regular-text {
+  font-size: 16px;
+}
+
+/* Stacked cards */
+.stacked-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  height: 100%;
+}
+
+.stacked-cards .assistance-card {
+  height: auto;
+  flex: 1;
+}
+
+/* Адаптация для планшетов */
+@media (min-width: 768px) {
+  .assistance-header h1 {
+    font-size: 42px;
+  }
+
+  .assistance-header h2 {
+    font-size: 36px;
+  }
+
+  .cards-row {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .first-row {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .wide-card-layout {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .wide-card-image {
+    margin-right: 20px;
+    margin-bottom: 0;
+  }
+
+  .wide-card-text {
+    text-align: left;
+  }
+
+  .years-number,
+  .guarantee-number,
+  .warranty-number {
+    font-size: 54px;
+  }
+}
+
+/* Адаптация для десктопов */
+@media (min-width: 992px) {
+  .assistance-container {
+    padding: 30px;
+  }
+
+  .assistance-header h1 {
+    font-size: 50px;
+  }
+
+  .assistance-header h2 {
+    font-size: 42px;
+  }
+
+  .cards-grid {
+    gap: 20px;
+  }
+
+  .cards-row {
+    gap: 20px;
+  }
+
+  .first-row {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .second-row {
+    grid-template-columns: 1fr 1fr 2fr;
+  }
+
+  .third-row {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .fourth-row {
+    grid-template-columns: 2fr 1.5fr 1fr;
+  }
+
+  .assistance-card {
+    border-radius: 30px !important;
+  }
+
+  .wide-card-image {
+    width: 120px;
+    height: 120px;
+  }
+
+  .nas-image,
+  .award-image,
+  .methods-image,
+  .certificate-image,
+  .eurocare-image {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/* Очень маленькие экраны */
+@media (max-width: 480px) {
+  .assistance-header h1 {
+    font-size: 30px;
+  }
+
+  .assistance-header h2 {
+    font-size: 24px;
+  }
+
+  .wide-card-text,
+  .years-text,
+  .guarantee-text,
+  .warranty-text,
+  .nas-text,
+  .pickup-text,
+  .award-text,
+  .eurocare-text,
+  .therapy-regular-text {
+    font-size: 14px;
+  }
+
+  .bold-text,
+  .therapy-bold-text {
+    font-size: 16px;
+  }
+}

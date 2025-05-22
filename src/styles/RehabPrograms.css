@@ -1,0 +1,135 @@
+/* Основной контейнер */
+.element3-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Центрируем карточки */
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px; /* Максимальная ширина контейнера */
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Карточка услуги */
+.service-card {
+  width: calc(50% - 20px); /* 2 карточки в ряд на мобильных */
+  min-height: 270px;
+  border-radius: 30px !important; /* Уменьшил радиус для мобильных */
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  box-sizing: border-box;
+  transition: transform 0.3s ease; /* Анимация при наведении */
+}
+
+.card-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+/* Контейнер для изображения */
+.card-image-container {
+  width: 80px; /* Уменьшил для мобильных */
+  height: 60px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Изображение */
+.card-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* Текстовый контент */
+.card-text-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Заголовок карточки */
+.card-title {
+  text-align: center;
+  font-family: "Gilroy-Bold", Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 20px; /* Уменьшил для мобильных */
+  color: white;
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+/* Описание карточки */
+.card-description {
+  font-family: "Gilroy-Medium", Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: white;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* Планшеты (768px и выше) */
+@media (min-width: 768px) {
+  .service-card {
+    width: calc(33.333% - 20px); /* 3 карточки в ряд */
+    min-height: 328px;
+    border-radius: 40px !important;
+    padding: 20px;
+  }
+
+  .card-image-container {
+    width: 100px;
+    height: 100px;
+  }
+
+  .card-title {
+    font-size: 22px;
+  }
+}
+
+/* Десктоп (992px и выше) */
+@media (min-width: 992px) {
+  .service-card {
+    width: calc(25% - 20px); /* 4 карточки в ряд */
+    border-radius: 60px !important;
+  }
+
+  .card-title {
+    font-size: 24px;
+  }
+}
+
+/* Очень маленькие экраны (до 400px) */
+@media (max-width: 400px) {
+  .service-card {
+    width: 100%; /* 1 карточка в ряд */
+    min-height: 250px;
+  }
+
+  .card-image-container {
+    width: 70px;
+    height: 70px;
+  }
+
+  .card-title {
+    font-size: 18px;
+  }
+}
+
+/* Эффект при наведении (только для устройств с hover) */
+@media (hover: hover) {
+  .service-card:hover {
+    transform: translateY(-5px);
+  }
+}

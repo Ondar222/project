@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "skipLibCheck": true,      // Игнорирует ошибки в node_modules
+    "noEmitOnError": false,    // Позволяет компилировать, даже если есть ошибки
+    "strict": false            // Отключает строгий режим TypeScript
+  },
+  "files": [],
+  "references": [
+    {
+      "path": "./tsconfig.app.json"
+    },
+    {
+      "path": "./tsconfig.node.json"
+    },
+    {
+      "compilerOptions": {
+        "paths": {
+          "@/*": ["./src/*"]
+        }
+      }
+    }
+  ]
+}
+

@@ -1,0 +1,74 @@
+/* Базовые стили */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.title {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 700;
+  color: white;
+  font-size: 32px;
+  text-align: center;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.scheduleCard {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 560/718; /* Сохраняем пропорции оригинальной карточки */
+  background: white;
+  border-radius: 20px;
+  border: none;
+  overflow: hidden;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.scheduleImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Изменил на contain чтобы все содержимое было видно */
+}
+
+/* Планшетная версия */
+@media (min-width: 768px) {
+  .title {
+    font-size: 48px;
+  }
+
+  .scheduleCard {
+    border-radius: 30px;
+    max-width: 560px;
+  }
+}
+
+/* Десктоп версия */
+@media (min-width: 992px) {
+  .title {
+    font-size: 64px;
+  }
+
+  .scheduleCard {
+    border-radius: 40px;
+  }
+}
+
+/* Большие экраны */
+@media (min-width: 1200px) {
+  .container {
+    margin: 80px auto;
+  }
+}

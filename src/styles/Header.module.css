@@ -1,0 +1,130 @@
+/* Общие стили */
+.topPanel,
+.mainHeader {
+  width: 100%;
+  background-color: #1a352b;
+  color: white;
+  font-family: "Gilroy-Medium", sans-serif;
+}
+
+/* Верхняя панель с контактами */
+.topPanel {
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.topPanelContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 20px;
+  gap: 20px;
+}
+
+.workingHours,
+.location,
+.phone {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+}
+
+.icon {
+  font-size: 18px;
+  transform: rotate(120deg);
+}
+
+.icon-rotated {
+  transform: rotate(180deg);
+}
+
+.callButton {
+  background: linear-gradient(135deg, #8cd0ba 0%, #009b7d 100%);
+  border: none;
+  border-radius: 15px;
+  color: white;
+  font-weight: 700;
+  padding: 10px 20px;
+  height: auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  white-space: nowrap;
+}
+
+/* Основной заголовок */
+.mainHeader {
+  padding: 20px 0;
+  text-align: center;
+}
+
+.logoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.logo {
+  width: 178px;
+  height: 155px;
+}
+
+.logoText {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 36px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.regionInfo {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* Мобильная версия */
+@media (max-width: 768px) {
+  .topPanelContent {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .workingHours,
+  .location,
+  .phone {
+    font-size: 14px;
+    flex: 1 1 100%;
+    justify-content: center;
+  }
+
+  .callButton {
+    width: 100%;
+    padding: 12px;
+    order: 4;
+    margin-top: 10px;
+  }
+
+  .logo {
+    width: fit-content;
+  }
+
+  .logoText {
+    font-size: 28px;
+  }
+
+  .regionInfo {
+    font-size: 16px;
+    padding: 0 15px;
+  }
+}
+
+/* Десктоп: скрыть регион в топбаре */
+@media (min-width: 769px) {
+  .regionInfo {
+    display: none;
+  }
+}

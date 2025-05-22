@@ -1,0 +1,185 @@
+/* Testimonials.module.css */
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem;
+  background-color: #1a352b;
+}
+
+.mainTitle {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.subTitle {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #ffffff;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.carouselWrapper {
+  width: 100%;
+  max-width: 1200px;
+  position: relative;
+}
+
+.carousel {
+  width: 100%;
+}
+
+.carouselContent {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.carouselItem {
+  min-width: 0;
+  padding: 0 0.5rem;
+}
+
+.card {
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  min-height: 300px;
+  background-color: white;
+  border: none;
+}
+
+.cardContent {
+  padding: 1.5rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  margin-bottom: 1rem;
+}
+
+.name {
+  font-family: "Gilroy-Bold", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #333;
+  margin: 0;
+}
+
+.testimonialContent {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sectionLabel {
+  font-family: "Gilroy-Bold", sans-serif;
+  font-weight: 700;
+  color: #333;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.advantagesText,
+.commentText {
+  font-family: "Gilroy-Medium", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #555;
+  margin: 0;
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.navButtonPrev,
+.navButtonNext {
+  position: static;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transform: none;
+}
+
+.navArrow {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+/* Desktop styles */
+@media (min-width: 768px) {
+  .section {
+    padding: 3rem 2rem;
+  }
+
+  .mainTitle {
+    font-size: 3rem;
+  }
+
+  .subTitle {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .carouselItem {
+    flex: 0 0 calc(50% - 1rem);
+    padding: 0 1rem;
+  }
+
+  .card {
+    min-height: 350px;
+  }
+
+  .cardContent {
+    padding: 2rem;
+  }
+
+  .name {
+    font-size: 1.4rem;
+  }
+
+  .advantagesText,
+  .commentText {
+    font-size: 1.1rem;
+  }
+
+  .navButtonPrev,
+  .navButtonNext {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* Large desktop */
+@media (min-width: 1024px) {
+  .mainTitle {
+    font-size: 3.5rem;
+  }
+
+  .subTitle {
+    font-size: 3rem;
+  }
+
+  .carouselItem {
+    flex: 0 0 calc(33.333% - 1.5rem);
+  }
+}
