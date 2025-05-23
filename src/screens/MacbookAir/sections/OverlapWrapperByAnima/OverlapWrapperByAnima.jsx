@@ -5,6 +5,9 @@ import styles from "../../../../styles/OverlapWrapper.module.css";
 
 const OverlapWrapperByAnima = () => {
   const [phoneNumber, setPhoneNumber] = useState("");
+  const [formattedPhone, setFormattedPhone] = useState(
+    "+7(____) ____ - __ -___"
+  );
   const [isLoading, setIsLoading] = useState(false);
   const [bgPosition, setBgPosition] = useState("50% 50%");
 
@@ -36,29 +39,20 @@ const OverlapWrapperByAnima = () => {
   const handlePhoneChange = (e) => {
     const value = e.target.value.replace(/\D/g, "");
     setPhoneNumber(value);
-  };
 
-  const formatPhoneNumber = (phone) => {
-    if (!phone) return "+7(____) ____ - __ -___";
-
-    const cleaned = phone.replace(/\D/g, "");
-    const match = cleaned.match(
-      /^(\d{0,1})(\d{0,3})(\d{0,3})(\d{0,2})(\d{0,2})/
-    );
-
-    if (!match) return phone;
-
+    // Форматирование номера в реальном времени
     let formatted = "+7";
-    if (match[2]) formatted += `(${match[2]}`;
-    if (match[3]) formatted += `) ${match[3]}`;
-    if (match[4]) formatted += `-${match[4]}`;
-    if (match[5]) formatted += `-${match[5]}`;
+    if (value.length > 1) formatted += `(${value.substring(1, 4)}`;
+    if (value.length > 4) formatted += `) ${value.substring(4, 7)}`;
+    if (value.length > 7) formatted += `-${value.substring(7, 9)}`;
+    if (value.length > 9) formatted += `-${value.substring(9, 11)}`;
 
-    return formatted || "+7(____) ____ - __ -___";
+    setFormattedPhone(formatted || "+7(____) ____ - __ -___");
   };
 
   const handleCallClick = () => {
     const cleanedPhone = phoneNumber.replace(/\D/g, "");
+
     if (!cleanedPhone || cleanedPhone.length < 11) {
       message.error("Пожалуйста, введите корректный номер телефона (11 цифр)");
       return;
@@ -66,11 +60,15 @@ const OverlapWrapperByAnima = () => {
 
     setIsLoading(true);
 
-    console.log("Номер для звонка:", `+7${cleanedPhone}`);
+    // Здесь должен быть реальный запрос к API
+    console.log("Отправка номера:", `+7${cleanedPhone}`);
 
+    // Имитация запроса
     setTimeout(() => {
       message.success(`Мы скоро вам перезвоним по номеру +7${cleanedPhone}`);
       setIsLoading(false);
+      setPhoneNumber("");
+      setFormattedPhone("+7(____) ____ - __ -___");
     }, 1500);
   };
 
@@ -106,8 +104,8 @@ const OverlapWrapperByAnima = () => {
                   <PhoneOutlined className={styles.phoneIcon} />
                   <Input
                     className={styles.phoneInput}
-                    placeholder={formatPhoneNumber(phoneNumber)}
-                    value={phoneNumber}
+                    placeholder={formattedPhone}
+                    value={formattedPhone}
                     onChange={handlePhoneChange}
                     maxLength={18}
                   />

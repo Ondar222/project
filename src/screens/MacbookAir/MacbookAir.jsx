@@ -12,6 +12,7 @@ import { Footer } from "./sections/Footer/Footer";
 import { RoutineComponents } from "./RoutineComponents/RoutineComponents";
 import { AchievementsComponents } from "./AchievementsComponents/AchievementsComponents";
 import { DispensaryComponent } from "./DispensaryComponent/DispensaryComponent";
+import { UserCard } from "./UserCard/UserCard";
 
 export const MacbookAir = () => {
   return (
@@ -35,11 +36,8 @@ export const MacbookAir = () => {
           <DivWrapperByAnima />
           <ElementWrapperByAnima />
 
-          {/* Video Section (Placeholder) */}
-          {/* <ElementByAnima /> */}
-
-          {/* Dispensary & Footer */}
           <DispensaryComponent />
+          <UserCard />
           <Footer />
         </div>
       </div>

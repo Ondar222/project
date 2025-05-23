@@ -1,0 +1,190 @@
+/* Основные стили секции */
+.user-card-section {
+  width: 100%;
+  max-width: 1140px;
+  height: 285px;
+  background: #dbf7ee;
+  border-radius: 60px;
+  overflow: hidden;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+/* Контейнер карточки */
+.user-card-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+}
+
+/* Левая часть с контентом */
+.user-card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  width: 475px;
+  height: 145px;
+  z-index: 2;
+}
+
+/* Текст */
+.user-card-text {
+  font-family: "Gilroy-Medium", Helvetica, sans-serif;
+  font-weight: 500;
+  color: #1a352b;
+  font-size: 16px;
+  line-height: 1.4;
+  text-align: start;
+}
+
+/* Карточка с телефоном */
+.user-card-phone-card {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border: none;
+  padding: 20px;
+}
+
+.user-card-phone-content {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  text-align: center;
+}
+
+.user-card-phone-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-card-phone-icon {
+  width: 24px;
+  height: 24px;
+  color: #009b7d;
+}
+
+.user-card-phone-number {
+  font-family: "Gilroy-Medium", Helvetica, sans-serif;
+  font-weight: 500;
+  color: #1a352b;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+/* Кнопка */
+.user-card-call-button {
+  max-width: 160px;
+  max-height: 47px;
+  padding: 20px;
+  border-radius: 15px;
+  background: linear-gradient(
+    135deg,
+    rgba(140, 208, 186, 1) 0%,
+    rgba(0, 155, 125, 1) 50%
+  );
+  border: none;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-card-button-text {
+  font-family: "Gilroy-Bold", Helvetica, sans-serif;
+  font-weight: 700;
+  color: white;
+  font-size: 14px;
+}
+
+/* Правая часть с изображением */
+.user-card-image-container {
+  width: 400px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.user-card-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transform: rotate(320deg);
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 768px) {
+  .user-card-section {
+    width: 100%;
+    height: 100%;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    background: #dbf7ee url("/image-25.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 30px;
+    padding: 40px 20px;
+  }
+
+  .user-card-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    height: 100%;
+  }
+
+  .user-card-content {
+    width: 100%;
+    height: auto;
+    margin-top: 30px;
+  }
+
+  .user-card-text {
+    padding-top: 200px;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .user-card-phone-card {
+    width: 100% !important;
+    padding: 15px !important;
+    margin-top: 100px;
+  }
+
+  .user-card-phone-content {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .user-card-phone-wrapper {
+    justify-content: center;
+  }
+
+  .user-card-call-button {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .user-card-image-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: transparent;
+  }
+
+  .user-card-image-container img {
+    display: none;
+  }
+}
