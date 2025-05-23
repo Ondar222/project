@@ -15,7 +15,7 @@ export const ElementWrapperByAnima = () => {
       id: 2,
       name: "Харлашкина Наталья Григорьевна",
       position: "Помощь: арт-терапевт, психоаналитик, гештальт-терапевт",
-      image: "/img/name2.png",
+      image: "/img/name2 1.png",
     },
     {
       id: 3,
@@ -34,7 +34,7 @@ export const ElementWrapperByAnima = () => {
       name: "Долотова Юлия Романова",
       position:
         "Помощь: гештальт-терапевт наркологического Центра «Двенадцатый Шаг»",
-      image: "/img/name5.png",
+      image: "/img/name5 1.png",
     },
     {
       id: 6,
