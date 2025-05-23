@@ -247,7 +247,7 @@ export const AssistanceComponent = () => {
         </div>
 
         {/* Второй ряд - 1 колонка на всю ширину */}
-        <div className="cards-row second-row">
+        {/* <div className="cards-row second-row">
           <div className="full-width-card">
             <Card
               style={{ background: featuresData[2].bgColor }}
@@ -256,44 +256,9 @@ export const AssistanceComponent = () => {
               {featuresData[2].content}
             </Card>
           </div>
-        </div>
+        </div> */}
 
-        {/* Третий ряд - 2 колонки */}
-        <div className="cards-row third-row">
-          <div className="medium-card">
-            <Card
-              style={{ backgroundColor: featuresData[3].bgColor }}
-              className="assistance-card"
-            >
-              {featuresData[3].content}
-            </Card>
-          </div>
-          <div className="medium-card">
-            <Card
-              style={{
-                backgroundColor: featuresData[4].bgColor,
-                border: featuresData[4].border,
-              }}
-              className="assistance-card"
-            >
-              {featuresData[4].content}
-            </Card>
-          </div>
-        </div>
-
-        {/* Четвертый ряд - 1 колонка на всю ширину */}
-        <div className="cards-row fourth-row">
-          <div className="full-width-card">
-            <Card
-              style={{ backgroundColor: featuresData[5].bgColor }}
-              className="assistance-card"
-            >
-              {featuresData[5].content}
-            </Card>
-          </div>
-        </div>
-
-        {/* Пятый ряд - 3 колонки */}
+        {/* ]Второй ряд - 3 колонки */}
         <div className="cards-row fifth-row">
           <div className="small-card">
             <Card
@@ -329,6 +294,41 @@ export const AssistanceComponent = () => {
               className="assistance-card"
             >
               {featuresData[8].content}
+            </Card>
+          </div>
+        </div>
+
+        {/* Третий ряд - 2 колонки */}
+        <div className="cards-row third-row">
+          <div className="medium-card">
+            <Card
+              style={{ backgroundColor: featuresData[3].bgColor }}
+              className="assistance-card"
+            >
+              {featuresData[3].content}
+            </Card>
+          </div>
+          <div className="medium-card">
+            <Card
+              style={{
+                backgroundColor: featuresData[4].bgColor,
+                border: featuresData[4].border,
+              }}
+              className="assistance-card"
+            >
+              {featuresData[4].content}
+            </Card>
+          </div>
+        </div>
+
+        {/* Четвертый ряд - 1 колонка на всю ширину */}
+        <div className="cards-row fourth-row">
+          <div className="full-width-card">
+            <Card
+              style={{ backgroundColor: featuresData[5].bgColor }}
+              className="assistance-card"
+            >
+              {featuresData[5].content}
             </Card>
           </div>
         </div>
