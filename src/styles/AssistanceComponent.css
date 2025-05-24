@@ -8,27 +8,33 @@
   align-items: center;
   gap: 15px;
   padding: 20px;
-  background: #1a352b;
+  background: rgba(26, 53, 43, 1);
+
   box-sizing: border-box;
+}
+
+.text {
+  color: #1a352b;
+  font-size: 20px;
 }
 
 .assistance-header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 15px;
+
   width: 100%;
-  padding: 0 15px;
+  z-index: 1000 !important;
 }
 
 .assistance-header h1,
 .assistance-header h2 {
   font-family: "Bebas Neue", sans-serif;
-  font-weight: 700;
-  color: #ffffff;
   text-align: center;
   margin: 0;
-  line-height: 1.2;
+  font-size: 64px;
+  color: rgba(255, 255, 255, 1);
+  font-weight: 700;
 }
 
 .assistance-header h1 {
@@ -86,13 +92,6 @@
   text-align: center;
 }
 
-.bold-text {
-  font-weight: 700;
-  font-size: 18px;
-  display: block;
-  margin-bottom: 10px;
-}
-
 .medium-text {
   font-weight: 500;
 }
@@ -106,8 +105,9 @@
   justify-content: center;
   align-items: center;
   padding: 20px;
-  text-align: center;
+  text-align: start;
   height: 100%;
+  font-size: 20px;
 }
 
 .years-number,
@@ -130,11 +130,68 @@
 }
 
 /* Карточки с изображениями */
+
+.award-card {
+  display: flex;
+  flex-direction: row;
+  height: 100% !important;
+  width: 100% !important;
+}
+
+.award-image {
+  max-width: 250px !important;
+  max-height: 250px !important;
+  object-fit: contain;
+}
+
+.award-text {
+  width: 100% !important;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0%;
+  line-height: 100%;
+  font-family: "Gilroy", sans-serif;
+}
+
+.pickup-card {
+  color: #ffffff;
+  font-size: 16px !important;
+  font-weight: 500;
+  line-height: 100%;
+}
+
+.pickup-image {
+  width: 138px !important;
+  height: 138px !important;
+  margin: 0 auto;
+}
+
+.certificate-card {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.certificate-image {
+  object-fit: cover;
+  width: 100% !important;
+  max-height: 100% !important;
+}
+
+.certificate-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color: rgba(0, 155, 125, 1);
+  font-weight: 700;
+  font-size: 48px;
+}
+
 .nas-card,
-.pickup-card,
-.award-card,
 .methods-card,
-.certificate-card,
 .eurocare-card,
 .therapy-card {
   display: flex;
@@ -146,11 +203,12 @@
   text-align: center;
 }
 
-.nas-image,
-.pickup-image,
-.award-image,
+.nas-image {
+  width: 186px;
+  height: 186px;
+}
+
 .methods-image,
-.certificate-image,
 .eurocare-image {
   width: 80px;
   height: 80px;
@@ -165,11 +223,9 @@
 
 /* Текст в карточках */
 .nas-text,
-.pickup-text,
-.award-text,
 .eurocare-text {
   font-family: "Gilroy", sans-serif;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 /* Therapy card специфические стили */
@@ -275,7 +331,6 @@
   }
 }
 
-/* Адаптация для десктопов */
 @media (min-width: 992px) {
   .assistance-container {
     padding: 30px;
@@ -325,7 +380,6 @@
   }
 
   .nas-image,
-  .award-image,
   .methods-image,
   .certificate-image,
   .eurocare-image {
@@ -334,7 +388,6 @@
   }
 }
 
-/* Очень маленькие экраны */
 @media (max-width: 480px) {
   .assistance-header h1 {
     font-size: 30px;

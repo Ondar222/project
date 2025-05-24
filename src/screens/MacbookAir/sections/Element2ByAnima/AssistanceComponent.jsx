@@ -17,15 +17,11 @@ export const AssistanceComponent = () => {
               src="/img/lock.png"
             />
             <div className="wide-card-text">
-              <span className="bold-text">
-                Оказываем квалифицированную помощь
-              </span>
-              <span className="medium-text">
-                {" "}
-                зависимым. С вашим близким человеком будут работать
-                дипломированные психологи, гештальт-терапевты, клинические,
-                семейные психологи, психиатры, квалифицированная помощь в
-                решении юридических проблем.
+              <span className="text">
+                <b>Оказываем квалифицированную помощь</b> зависимым. С вашим
+                близким человеком будут работать дипломированные психологи,
+                гештальт-терапевты, клинические, семейные психологи, психиатры,
+                квалифицированная помощь в решении юридических проблем.
               </span>
             </div>
           </div>
@@ -49,13 +45,15 @@ export const AssistanceComponent = () => {
     {
       id: 3,
       type: "full-width",
-      bgColor: "linear-gradient(135deg, #8cd0ba 0%, #009b7d 100%)",
+      bgColor: "#DCF8EF",
       content: (
         <div className="award-card">
           <img
             className="award-image"
             alt="Лучшие частные клиники"
             src="/img/cup.png"
+            width={382}
+            height={382}
           />
           <div className="award-text">
             Лауреат Национального конкурса «Лучшие частные клиники Российской
@@ -156,7 +154,7 @@ export const AssistanceComponent = () => {
       type: "small-stacked",
       content: [
         {
-          bgColor: "#dbf7ee",
+          bgColor: "#DCF8EF",
           innerContent: (
             <div className="guarantee-card">
               <div className="guarantee-number">100%</div>
@@ -165,7 +163,7 @@ export const AssistanceComponent = () => {
           ),
         },
         {
-          bgColor: "#009B7D",
+          bgColor: "rgba(0, 155, 125, 1)",
           border: "1px solid #009B7D",
           innerContent: (
             <div className="pickup-card">
@@ -246,18 +244,6 @@ export const AssistanceComponent = () => {
           </div>
         </div>
 
-        {/* Второй ряд - 1 колонка на всю ширину */}
-        {/* <div className="cards-row second-row">
-          <div className="full-width-card">
-            <Card
-              style={{ background: featuresData[2].bgColor }}
-              className="assistance-card"
-            >
-              {featuresData[2].content}
-            </Card>
-          </div>
-        </div> */}
-
         {/* ]Второй ряд - 3 колонки */}
         <div className="cards-row fifth-row">
           <div className="small-card">
@@ -288,12 +274,12 @@ export const AssistanceComponent = () => {
           <div className="medium-card">
             <Card
               style={{
-                background: featuresData[8].bgColor,
-                border: featuresData[8].border,
+                background: featuresData[2].bgColor,
+                border: featuresData[2].border,
               }}
               className="assistance-card"
             >
-              {featuresData[8].content}
+              {featuresData[2].content}
             </Card>
           </div>
         </div>
@@ -311,21 +297,9 @@ export const AssistanceComponent = () => {
           <div className="medium-card">
             <Card
               style={{
-                backgroundColor: featuresData[4].bgColor,
-                border: featuresData[4].border,
+                backgroundColor: featuresData[5].bgColor,
+                border: featuresData[5].border,
               }}
-              className="assistance-card"
-            >
-              {featuresData[4].content}
-            </Card>
-          </div>
-        </div>
-
-        {/* Четвертый ряд - 1 колонка на всю ширину */}
-        <div className="cards-row fourth-row">
-          <div className="full-width-card">
-            <Card
-              style={{ backgroundColor: featuresData[5].bgColor }}
               className="assistance-card"
             >
               {featuresData[5].content}
@@ -333,11 +307,33 @@ export const AssistanceComponent = () => {
           </div>
         </div>
 
-        {/* Шестой ряд - 1 колонка */}
-        <div className="cards-row sixth-row">
+        {/* Четвертый ряд - 1 колонка на всю ширину */}
+        <div className="cards-row fifth-row">
           <div className="small-card">
             <Card
-              style={{ backgroundColor: featuresData[9].bgColor }}
+              style={{ background: featuresData[8].bgColor }}
+              className="assistance-card"
+            >
+              {featuresData[8].content}
+            </Card>
+          </div>
+          <div className="stacked-cards">
+            <Card
+              style={{
+                backgroundColor: featuresData[4].bgColor,
+                border: featuresData[4].bgColor,
+              }}
+              className="assistance-card"
+            >
+              {featuresData[4].content}
+            </Card>
+          </div>
+          <div className="medium-card">
+            <Card
+              style={{
+                background: featuresData[9].bgColor,
+                border: featuresData[9].bgColor,
+              }}
               className="assistance-card"
             >
               {featuresData[9].content}
